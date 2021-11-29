@@ -6,14 +6,14 @@ namespace WiredBrainCoffeeSurveys.Reports
     {
         static void Main(string[] args)
         {
-            double responseRate;
-            double unansweredCount;
-
-            responseRate = Q1Results.NumberResponded / Q1Results.NumberSurveyed;
-            unansweredCount = Q1Results.NumberSurveyed - Q1Results.NumberResponded;
+            //Calculated Values
+            double responseRate = Q1Results.NumberResponded / Q1Results.NumberSurveyed;
+            double unansweredCount = Q1Results.NumberSurveyed - Q1Results.NumberResponded;
+            double overallScores = (Q1Results.ServiceScore + Q1Results.CoffeeScore + Q1Results.FoodScore + Q1Results.PriceScore) / 4;
 
             Console.WriteLine($"Response Percentage: {responseRate}");
             Console.WriteLine($"Unanswered Surveys: {unansweredCount}");
+            Console.WriteLine($"Overall Score: {overallScores}");
         }
     }
 }
