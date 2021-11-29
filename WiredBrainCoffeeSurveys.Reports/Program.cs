@@ -26,6 +26,19 @@ namespace WiredBrainCoffeeSurveys.Reports
             {
                 tasks.Add("Work with employees for improving ideas.");
             }
+
+            if (responseRate < 0.33)
+            {
+                tasks.Add("Research options to improve response rate.");
+            }
+            else if (responseRate >= 0.33 && responseRate < 0.66)
+            {
+                tasks.Add("Reward participants with free coffee coupon.");
+            }
+            else
+            {
+                tasks.Add("Rewards participants with discount coffee coupon.");
+            }
         }
     }
 }
